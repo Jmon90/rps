@@ -2,32 +2,50 @@ console.log("Hello World!");
 
 // Function to choose rock paper or scissors
 function getComputerChoice(cchoice) {
-    // gets random index value
-const randomItem = Math.floor(Math.random() * cchoice.length);
-// gets random item
-const item = cchoice[randomItem];
+    const myArray = ['rock', 'paper', 'scissors'];
 
-return item;
+let randomItem = myArray[Math.floor(Math.random() * myArray.length)];
+
+
+return randomItem;
 }
 
-const array = ['Rock', 'Paper', 'Scissors'];
-const result = getComputerChoice(array);
 
 
-console.log(result);
+console.log();
+// It Works!!
+
 
 function playGame(){
 
+   let playerSelection = prompt("Rock, Paper, Scissors").toLowerCase();
+console.log(playerSelection);
+    if (playerSelection === "rock" && getComputerChoice() === "scissors") {
+        alert("You won!");
+    }
 
 
+   else if (playerSelection === "paper" && getComputerChoice() === "rock") {
+        alert("You won!");
+    }
+     
 
-
+   else if (playerSelection === "scissors" && getComputerChoice() === "paper") {
+        alert("You won!");
+    }
+   
+   
+    else {
+    alert("You lost!");
+    }
 
 function playRound(playerSelection, computerSelection) {
-    // your code here!
+    if (playerSelection = computerSelection){
+        alert('You Win!')
+    }
   }
   
-  const playerSelection = "rock";
+ 
   const computerSelection = getComputerChoice();
   console.log(playRound(playerSelection, computerSelection));
   
@@ -35,4 +53,8 @@ function playRound(playerSelection, computerSelection) {
 
 
 }
-
+playGame();
+playGame();
+playGame();
+playGame();
+playGame();
